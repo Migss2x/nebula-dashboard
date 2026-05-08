@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nebula Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- STAR BACKGROUND -->
+<div class="stars"></div>
+
+<!-- LOGIN SCREEN -->
+<div id="loginScreen" class="center">
+  <div class="card glass">
+
+    <h1 class="title">NEBULA</h1>
+    <p class="subtitle">Secure Access Portal</p>
+
+    <input id="username" placeholder="Username" />
+    <input id="password" type="password" placeholder="Password" />
+
+    <button onclick="login()">Login</button>
+
+    <p id="status"></p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="dashboard" class="hidden">
+
+  <div class="sidebar glass">
+    <h2>Dashboard</h2>
+    <button onclick="showPanel('home')">Home</button>
+    <button onclick="showPanel('stats')">Stats</button>
+    <button onclick="showPanel('logs')">Logs</button>
+    <button onclick="logout()">Logout</button>
+  </div>
+
+  <div class="main">
+
+    <div id="home" class="panel glass">
+      <h1>Welcome</h1>
+      <p>System online and running.</p>
+    </div>
+
+    <div id="stats" class="panel glass hidden">
+      <h1>Live Stats</h1>
+      <p>CPU: 12%</p>
+      <p>RAM: 3.2GB</p>
+      <p>Processes: 128</p>
+    </div>
+
+    <div id="logs" class="panel glass hidden">
+      <h1>Logs</h1>
+      <ul>
+        <li>System initialized</li>
+        <li>User authenticated</li>
+        <li>Dashboard loaded</li>
+      </ul>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
