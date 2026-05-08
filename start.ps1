@@ -1,0 +1,1 @@
+Start-Process "https://migss2x.github.io/nebula-dashboard/"
